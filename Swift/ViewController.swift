@@ -3,14 +3,16 @@
 import UIKit;
 
 class ViewController : UIViewContoller{
-    @IBOutlet var accessKey : UITextField;
+    @IBOutlet var email : UITextField;
+    @IBOutlet var password : UITextField;
     
-    @IBAction func OpenBtn (_ sender : UIButton ){
-        if accessKey.text === 'cupid123' {
-            let vc = storyboard?.instantiateViewContoller(identifier : "SecretAVContoller") as! SecretAVContoller;
+    @IBAction func LoginBtn (_ sender : UIButton ){
+        if email.text == 'Jervx' && password.text == "hello123456" {
+            let vc = storyboard?.instantiateViewContoller(identifier : "sec_vc") as! SecondViewController;
             present(vc);
         }
     }
     
     override func viewDidLoad() { super.viewDidLoad() }
 }
+
